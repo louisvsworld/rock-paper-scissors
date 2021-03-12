@@ -5,6 +5,7 @@ state = ""
 while state == "":
     user = input("Choose your weapon! [Rock, Paper, Scissors] ")
 
+
     value = random.randint(1,3)
 
     #Sets value of weapon per integer
@@ -15,7 +16,11 @@ while state == "":
     elif value == 3:
         value = "Scissors"
 
-    print("Bot chose " + str(value))
+    if user == "Rock" or user == "Paper" or user == "Scissors":
+        print("────────────────────────────────────────────────\nBot chose " + str(value)) 
+    else:
+       print("────────────────────────────────────────────────\nERROR ERROR ERROR\nPlease choose between 'Rock', 'Paper', or 'Scissors' ")
+       
 
     #In the case of a tie
     if user == value:
@@ -34,7 +39,8 @@ while state == "":
         print("You have won! ")
     elif user == "Paper" and value == "Rock":
         print("You have won! ") 
+
     
     #Enables user to play again or end game by altering the variable while is dependent on
-    state = input("Press enter to play again or type exit to leave ")
+    state = input("────────────────────────────────────────────────\nPress enter to play again or type 'exit' to leave\n────────────────────────────────────────────────\n")
 
